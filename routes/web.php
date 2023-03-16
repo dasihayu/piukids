@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\DetailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('artikel',[ArticlesController::class,'index']);
+
+Route::get('tentang-kami', [AboutController::class,'index']);
+
+Route::get('detail', [DetailController::class,'index']);
