@@ -16,19 +16,22 @@
     @vite('resources/css/app.css')
 
     {{-- CSS --}}
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body class="bg-[#f5f5f5]">
-    <div class="full-container bg-[#fff] mx-auto max-w-md h-screen overflow-y-scroll">
-        @include('template.navbar')
+    <div class="full-container bg-[#fff] mx-auto max-w-sm h-screen overflow-y-scroll relative">
+        {{-- @include('template.navbar') --}}
 
-        <div class="content px-4">
+        <div class="content">
             @yield('content')
         </div>
 
         @include('template.footer')
     </div>
 </body>
+
+{{-- Icon --}}
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
 </html>
