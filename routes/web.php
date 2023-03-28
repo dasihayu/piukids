@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\ShopsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,4 +25,8 @@ Route::get('artikel',[ArticlesController::class,'index']);
 
 Route::get('tentang-kami', [AboutController::class,'index']);
 
-Route::get('detail', [DetailController::class,'index']);
+Route::get('belanja',[ShopsController::class,'index']);
+
+Route::get('detail-barang/{shops:product}', [ShopsController::class,'show']);
+
+Route::get('detail-artikel/{articles:title}',[ArticlesController::class,'show']);
