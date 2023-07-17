@@ -3,16 +3,16 @@
 @section('content')
     <nav class="nav flex w-full h-14 border-b-2 items-center px-4" id="nav">
         <a href="\">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
             <path fill="currentColor"
                 d="M15.125 21.1L6.7 12.7q-.15-.15-.212-.325q-.063-.175-.063-.375t.063-.375q.062-.175.212-.325l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z" />
             </svg>
         </a>
-        <h1 class=" ml-6 font-semibold ">Belanja</h1>
+        <h1 class=" ml-6 font-semibold ">Permainan</h1>
     </nav>
 
+    {{-- search section --}}
     <section class="section-shops pt-7 pb-16">
-        {{-- search section --}}
         <form action="" method="get"
             class="w-[343px] h-12 border flex items-center px-5 rounded-lg mx-auto mb-7 bg-white">
             <button type="submit" for="search" class="cursor-pointer">
@@ -25,37 +25,26 @@
                 placeholder="Pencarian Permainan" value="{{ old('search') }}">
         </form>
         {{-- akhir search section --}}
-        {{-- item section --}}
-        @if ($shops->count())
-            <section class="items px-4 flex flex-wrap justify-between" id="items">
-                @foreach ($shops as $shop)
-                    <div class="item relative w-[104px] h-60 bg-white rounded-xl shadow mt-6">
-                        <div class="image-section">
-                            <a href="/detail-barang/{{ $shop->product }}">
-                                <img src="/img/fakebanner.png" alt="" class=" rounded-t-xl w-[104px] h-[104px]">
-                            </a>
+
+        {{-- games section --}}
+        @if ($games->count())
+            <section class="games pt-8 pb-24 px-4" id="games">
+                <h1 class="font-semibold">Ide Permainan Anak</h1>
+                @foreach ($games as $game)
+                    <article class="game mt-4 w-full rounded-xl h-[100px] px-3 border-2 flex justify-between items-center"
+                        id="game">
+                        <div class="text text-xs flex flex-col">
+                            <a href="detail-permainan/{{ $game->title }}" class=" w-[130px]">{{ $game->title }}</a>
+                            <a href="" class="text-[10px] mt-1 text-[#607C23]">{{ $game->category->name }}</a>
                         </div>
-                        <div class="price-section pl-1 mt-1 w-[90px]">
-                            <a href="/detail-barang/{{ $shop->product }}"
-                                class="text-xs text-[#404040]">{{ $shop->product }}</a>
-                            <div class="prices flex items-center justify-between my-1">
-                                <p class="bg-[#F8CE60] text-white px-1 rounded-lg text-[10px]">{{ $shop->discount }}%</p>
-                                @php
-                                    $discountPrice = ($shop->discount / 100) * $shop->price;
-                                @endphp
-                                <p class=" line-through text-[10px] text-[#404040]">
-                                    {{ number_format($discountPrice, 0, '', '.') }}</p>
-                            </div>
-                            <h6 class="text-xs font-semibold mb-3">Rp {{ number_format($shop->price, 0, '', '.') }}</h6>
+                        <div class="image">
+                            <a href=""><img src="img/fakeimage.png" alt=""></a>
                         </div>
-                        <div class="buy-section absolute bottom-2">
-                            <a href=""
-                                class="bg-[#91A666] text-xs text-white font-semibold px-8 py-1 mx-2 text-center rounded">Beli</a>
-                        </div>
-                    </div>
+                    </article>
                 @endforeach
+                {{ $games->links() }}
             </section>
-            {{-- akhir item section --}}
+            {{-- akhir games section --}}
         @else
             <div class="something-else font-medium text-xl text-center my-32 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24">
@@ -64,8 +53,8 @@
                     <path fill="#91A666"
                         d="M6.47 10.82L4 13.29l-2.47-2.47l-.71.71L3.29 14L.82 16.47l.71.71L4 14.71l2.47 2.47l.71-.71L4.71 14l2.47-2.47z" />
                 </svg>
-                <h1 class="ml-2 text-[#757575]">Ooops, produk gak ada</h1>
+                <h1 class="ml-2 text-[#757575]">Ooops, permainan gak ada</h1>
             </div>
         @endif
-    </section>
-@endsection
+        </section>
+    @endsection

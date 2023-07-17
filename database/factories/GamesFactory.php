@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Categories>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Games>
  */
-class CategoriesFactory extends Factory
+class GamesFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,7 +18,10 @@ class CategoriesFactory extends Factory
     {
         return [
             //
-            'name'=>fake()->name()
+            'category_id'=>mt_rand(1,5),
+            'title'=>fake()->slug(),
+            'author'=>fake()->name(),
+            'content'=>fake()->text()
         ];
     }
 }

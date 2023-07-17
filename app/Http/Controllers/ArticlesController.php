@@ -23,5 +23,5 @@ class ArticlesController extends Controller
             'article'=>$articles,
             'articles'=>Articles::latest()->paginate(3)
         ]);
-    }
+    }   
 }

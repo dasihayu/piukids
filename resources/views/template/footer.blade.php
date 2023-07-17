@@ -63,7 +63,7 @@
         <h1 class="font-semibold">Belanja</h1>
         <div class="online-shop mt-3">
             <a href=""><img src="/img/shopee.png" alt="" class="mb-2"></a>
-            <a href=""><img src="/img/tokopedia.png" alt=""></a>
+            <a href="" class=""><img src="/img/tiktok.png" alt=""></a>
         </div>
     </div>
 </footer>

@@ -17,9 +17,12 @@
 
     {{-- CSS --}}
     <link rel="stylesheet" href="/css/style.css">
+
+    {{-- Swiper JS --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
-<body class="bg-[#f5f5f5]">
+<body class="bg-[#C2C2C2]">
     <div class="full-container bg-[#fff] mx-auto max-w-sm h-screen overflow-y-scroll relative">
         {{-- @include('template.navbar') --}}
 
@@ -29,9 +32,15 @@
 
         @include('template.footer')
     </div>
-</body>
 
-{{-- Icon --}}
-<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    {{-- Icon --}}
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    {{-- Swiper JS --}}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    {{-- JS --}}
+    <script src="/js/script.js"></script>
+</body>
 
 </html>
