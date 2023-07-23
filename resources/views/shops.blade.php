@@ -22,7 +22,7 @@
                 </svg>
             </button>
             <input type="search" name="search" id="search" width="100%" class="px-2 outline-none text-xs ml-5"
-                placeholder="Pencarian Permainan" value="{{ old('search') }}">
+                placeholder="Pencarian Produk" value="{{ old('search') }}">
         </form>
         {{-- akhir search section --}}
         {{-- item section --}}
@@ -49,7 +49,7 @@
                             <h6 class="text-xs font-semibold mb-3">Rp {{ number_format($shop->price, 0, '', '.') }}</h6>
                         </div>
                         <div class="buy-section absolute bottom-2">
-                            <a href=""
+                            <a href="/detail-barang/{{ $shop->product }}"
                                 class="bg-[#91A666] text-xs text-white font-semibold px-8 py-1 mx-2 text-center rounded">Beli</a>
                         </div>
                     </div>

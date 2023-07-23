@@ -16,7 +16,7 @@
         <div class="all-category ml-2 flex overflow-x-scroll" id="category">
             @foreach ($categories as $category)
                 <div class="category mx-4 text-center">
-                    <a href=""><img src="img/fakeimage.png" alt="kategory" class="h-14"></a>
+                    <a href=""><img src="img/fakeimage.png" alt="kategory" class="h-14 w-14"></a>
                     <a href="" class="text-xs">{{ $category->name }}</a>
                 </div>
             @endforeach

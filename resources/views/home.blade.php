@@ -4,10 +4,10 @@
     {{-- navbar --}}
     <nav class="nav flex items-center bg-white h-10 border-b-2 z-50" id="nav">
         <ul class="flex justify-evenly text-xs">
-            <li><a href="" class="font-semibold text-[#91A666]">Beranda</a></li>
-            <li><a href="" class=" ml-10">Artikel</a></li>
-            <li><a href="" class=" ml-10">Tentang Kami</a></li>
-            <li><a href="" class=" ml-10">Belanja</a></li>
+            <li><a href="/" class="font-semibold text-[#91A666]">Beranda</a></li>
+            <li><a href="/artikel" class=" ml-10">Artikel</a></li>
+            <li><a href="/tentang-kami" class=" ml-10">Tentang Kami</a></li>
+            <li><a href="/belanja" class=" ml-10">Belanja</a></li>
         </ul>
     </nav>
     {{-- akhir navbar --}}
@@ -30,20 +30,20 @@
     <section class="categories px-4 mb-6" id="categories">
         <div class="all-category ml-2 flex overflow-x-scroll" id="category">
             <div class="category mx-4 text-center">
-                <a href=""><img src="img/fakeimage.png" alt="kategory" class="h-14"></a>
-                <a href="" class="text-xs">Belanja</a>
+                <a href="/belanja"><img src="img/fakeimage.png" alt="kategory" class="h-14"></a>
+                <a href="/belanja" class="text-xs">Belanja</a>
             </div>
             <div class="category mx-4 text-center">
-                <a href=""><img src="img/fakeimage.png" alt="kategory" class="h-14"></a>
-                <a href="" class="text-xs">Permainan</a>
+                <a href="/permainan"><img src="img/fakeimage.png" alt="kategory" class="h-14"></a>
+                <a href="/permainan" class="text-xs">Permainan</a>
             </div>
             <div class="category mx-4 text-center">
-                <a href=""><img src="img/fakeimage.png" alt="kategory" class="h-14"></a>
-                <a href="" class="text-xs">Event</a>
+                <a href="/events"><img src="img/fakeimage.png" alt="kategory" class="h-14"></a>
+                <a href="/events" class="text-xs">Event</a>
             </div>
             <div class="category mx-4 text-center">
-                <a href=""><img src="img/fakeimage.png" alt="kategory" class="h-14"></a>
-                <a href="" class="text-xs">Artikel</a>
+                <a href="/artikel"><img src="img/fakeimage.png" alt="kategory" class="h-14"></a>
+                <a href="/artikel" class="text-xs">Artikel</a>
             </div>
         </div>
     </section>

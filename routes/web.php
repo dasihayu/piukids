@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\EcommerceController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\GamesController;
 use App\Http\Controllers\HomeController;
@@ -38,6 +39,8 @@ Route::get('detail-barang/{shops:product}', [ShopsController::class,'show']);
 Route::get('detail-artikel/{articles:title}',[ArticlesController::class,'show']);
 
 Route::get('detail-permainan/{games:title}',[GamesController::class,'show']);
+
+Route::get('pilih-ecommerce',[EcommerceController::class,'index']);
 
 Route::get('admin',[LoginController::class,'index']);
 
