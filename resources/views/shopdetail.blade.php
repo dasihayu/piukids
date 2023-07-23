@@ -27,8 +27,8 @@
         <div class="flex">
             <h1 class="w-1/2 font-semibold mt-2">Rp {{ number_format($shop->price,0,'','.') }}</h1>
             <div class="w-1/2 flex justify-end">
-                <button
-                    class="bg-[#91A666] py-1 mx-4 text-center w-20 rounded text-white text-sm font-extrabold">Beli</button>
+                <a href="/pilih-ecommerce"
+                    class="bg-[#91A666] py-1 mx-4 text-center w-20 rounded text-white text-sm font-extrabold">Beli</a>
             </div>
         </div>
         <div class="pb-20 mt-8">

@@ -13,7 +13,7 @@ class ArticlesController extends Controller
         return view('articles',[
             'title'=>'Artikel',
             'articles'=>Articles::latest()->paginate(5),
-            'categories'=>Categories::latest()->get()
+            'categories'=>Categories::get()
         ]);
     }
 
@@ -23,5 +23,5 @@ class ArticlesController extends Controller
             'article'=>$articles,
             'articles'=>Articles::latest()->paginate(3)
         ]);
-    }
+    }   
 }

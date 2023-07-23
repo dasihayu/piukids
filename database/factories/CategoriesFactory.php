@@ -18,7 +18,7 @@ class CategoriesFactory extends Factory
     {
         return [
             //
-            
+            // 'name'=>fake()->name()
         ];
     }
 }
