@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\EcommerceController;
+use App\Http\Controllers\EditController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\GamesController;
 use App\Http\Controllers\HomeController;
@@ -45,3 +47,7 @@ Route::get('pilih-ecommerce',[EcommerceController::class,'index']);
 Route::get('admin',[LoginController::class,'index']);
 
 Route::post('admin',[LoginController::class,'login']);
+
+Route::get('admin/post', [AdminController::class, 'index']);
+
+Route::get('admin/post/edit', [EditController::class, 'index']);
