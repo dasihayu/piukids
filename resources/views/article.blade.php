@@ -15,7 +15,7 @@
     {{-- Article --}}
     <div class="articles" id="articles">
         <div class="image-section">
-            <img src="/img/fakeimage.png" alt="" width="100%" height="215px">
+            <img src="{{ asset('storage/'.$article->image) }}" alt="" width="100%" height="215px">
         </div>
         <div class="article-section px-4">
             <article class="article">
@@ -43,7 +43,7 @@
                     <a href="" class="text-[10px] mt-1 text-[#607C23]">{{ $article->category->name }}</a>
                 </div>
                 <div class="image">
-                    <a href=""><img src="/img/fakeimage.png" alt=""></a>
+                    <a href=""><img src="{{ asset('storage/'.$article->image) }}" alt="" class="w-[150px] h-20"></a>
                 </div>
             </article>
         @endforeach

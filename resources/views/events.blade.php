@@ -39,7 +39,7 @@
                             <h2 class="text-xs">{{ $event->name_event }}</h2>
                         </div>
                         <div class="buy-section absolute bottom-2">
-                            <a href="{{ $event->link_video }}"
+                            <a href="https://{{ $event->link_video }}"
                                 target="_blank"
                                 class="bg-[#91A666] text-xs text-white font-semibold px-[7px] py-1 mx-2 text-center rounded">Tonton
                                 Disini</a>

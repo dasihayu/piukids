@@ -29,7 +29,7 @@
         @if ($shops->count())
             <section class="items px-4 flex flex-wrap justify-between" id="items">
                 @foreach ($shops as $shop)
-                    <div class="item relative w-[104px] h-60 bg-white rounded-xl shadow mt-6">
+                    <div class="item relative w-[104px] h-[260px] bg-white rounded-xl shadow mt-6">
                         <div class="image-section">
                             <a href="/detail-barang/{{ $shop->product }}">
                                 <img src="/img/fakebanner.png" alt="" class=" rounded-t-xl w-[104px] h-[104px]">
