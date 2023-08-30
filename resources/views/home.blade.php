@@ -58,7 +58,7 @@
             </div>
             <div class="items flex flex-wrap justify-between">
                 @foreach ($shops as $shop)
-                    <div class="item relative w-[104px] h-60 bg-white rounded-xl shadow mt-5">
+                    <div class="item relative w-[104px] h-[260px] bg-white rounded-xl shadow mt-5">
                         <div class="image-section">
                             <a href="/detail-barang/{{ $shop->product }}">
                                 <img src="/img/fakebanner.png" alt="" class=" rounded-t-xl w-[104px] h-[104px]">
@@ -66,7 +66,7 @@
                         </div>
                         <div class="price-section pl-1 mt-1 w-[90px]">
                             <a href="/detail-barang/{{ $shop->product }}"
-                                class="text-xs text-[#404040]">{{ $shop->product }}</a>
+                                class="text-[10px] text-[#404040]">{{ $shop->product }}</a>
                             <div class="prices flex items-center justify-between my-1">
                                 <p class="bg-[#F8CE60] text-white px-1 rounded-lg text-[10px]">{{ $shop->discount }}%</p>
                                 @php
@@ -100,7 +100,7 @@
                         <a href="" class="text-[10px] mt-1 text-[#607C23]">{{ $article->category->name }}</a>
                     </div>
                     <div class="image">
-                        <a href=""><img src="img/fakeimage.png" alt=""></a>
+                        <a href=""><img src="{{ asset('storage/'.$article->image) }}" alt="" class="w-[150px] h-20"></a>
                     </div>
                 </article>
             @endforeach

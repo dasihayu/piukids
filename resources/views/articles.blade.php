@@ -32,7 +32,7 @@
                     <a href="" class="text-[10px] mt-1 text-[#607C23]">{{ $article->category->name }}</a>
                 </div>
                 <div class="image">
-                    <a href=""><img src="img/fakeimage.png" alt=""></a>
+                    <a href=""><img src="{{ asset('storage/'.$article->image) }}" alt="" class="w-[150px] h-20"></a>
                 </div>
             </article>
         @endforeach

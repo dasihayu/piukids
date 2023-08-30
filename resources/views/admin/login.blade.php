@@ -31,7 +31,7 @@
                     </ul>
                 </div>
             @endif
-            <form action="/admin" method="POST">
+            <form action="{{ route('admin/login') }}" method="POST">
                 @csrf
                 <div class="name block mb-4">
                     <label for="name" class="font-medium text-[#EDEDED]">Name</label>

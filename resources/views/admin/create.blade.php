@@ -40,11 +40,11 @@
             <h1 class="font-semibold text-base pl-4">Edit Postingan</h1>
         </div>
 
-        <form action="{{ route('admin/post/update-post',$article->id) }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('admin/post/save-post') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="p-4">
                 <label for="title">Judul</label>
-                <input type="text" placeholder="Judul disini" name="title" id="title" value="{{ $article->title }}"
+                <input type="text" placeholder="Judul disini" name="title" id="title"
                     class="text-sm font-normal border-b-2 border-[#43936C] outline-none w-full">
             </div>
             <div class="p-4">
@@ -57,7 +57,7 @@
             </div>
             <div class="p-4">
                 <label for="author">Penulis</label>
-                <input type="text" placeholder="Penulis disini" name="author" id="author" value="{{ $article->author }}"
+                <input type="text" placeholder="Penulis disini" name="author" id="author"
                     class="text-sm font-normal border-b-2 border-[#43936C] outline-none w-full">
             </div>
             <div class="mb-3 p-4">
@@ -65,11 +65,11 @@
                 <input class="form-control form-control-sm" id="image" type="file" name="image">
             </div>
             <div class="trix-content p-4">
-                <input id="content" type="hidden" name="content" value="{{ $article->content }}">
+                <input id="content" type="hidden" name="content">
                 <trix-editor input="content"></trix-editor>
             </div>
 
-            <button type="submit" class="ml-4 btn btn-success">Ubah Artikel</button>
+            <button type="submit" class="ml-4 btn btn-success">Publikasi</button>
         </form>
 
 
